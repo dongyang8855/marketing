@@ -11,8 +11,8 @@ var usersRouter = require('./routes/users');
 var app = express();
 
 // view engine setup
-app.set('views', path.join(__dirname, '..'));
-nunjucks.configure(path.join(__dirname, '..'), {
+app.set('views', path.join(__dirname, 'views'));
+nunjucks.configure(path.join(__dirname, 'views'), {
   autoescape: true,
   // noCache: process.env.NODE_ENV !== 'production',
   express: app

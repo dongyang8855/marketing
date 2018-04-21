@@ -4,7 +4,7 @@ var path = require('path');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render(path.join(__dirname, '../../index.html'), { title: 'Express' });
+  res.render(path.join(__dirname, '../views/index.html'), { title: 'Express' });
 });
 
 module.exports = router;
