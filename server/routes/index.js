@@ -6,5 +6,8 @@ var path = require('path');
 router.get('/', function(req, res, next) {
   res.render(path.join(__dirname, '../views/index.html'), { title: 'Express' });
 });
+router.get('/users', function(req, res, next) {
+  res.render(path.join(__dirname, '../views/user.html'), { title: 'Express' });
+});
 
 module.exports = router;

@@ -24,9 +24,9 @@ const devWebpackConfig = merge(baseWebpackConfig, {
   devServer: {
     clientLogLevel: 'warning',
     historyApiFallback: {
-      rewrites: [
-        { from: /.*/, to: path.posix.join(config.dev.assetsPublicPath, 'index.html') },
-      ],
+      /*rewrites: [
+        { from: /.*!/, to: path.posix.join(config.dev.assetsPublicPath, 'index.html') },
+      ],*/
     },
     hot: true,
     contentBase: false, // since we use CopyWebpackPlugin.
@@ -52,19 +52,19 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     new webpack.NamedModulesPlugin(), // HMR shows correct file names in console on update.
     new webpack.NoEmitOnErrorsPlugin(),
     // https://github.com/ampedandwired/html-webpack-plugin
-    new HtmlWebpackPlugin({
+    /*new HtmlWebpackPlugin({
       filename: 'index.html',
       template: 'index.html',
       inject: true
-    }),
+    }),*/
     // copy custom static assets
-    new CopyWebpackPlugin([
+    /*new CopyWebpackPlugin([
       {
         from: path.resolve(__dirname, '../static'),
         to: config.dev.assetsSubDirectory,
         ignore: ['.*']
       }
-    ])
+    ])*/
   ]
 })
 

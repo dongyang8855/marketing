@@ -11,13 +11,13 @@ function resolve (dir) {
 
 
 module.exports = {
-  context: path.resolve(__dirname, '../'),
+  context: path.resolve(__dirname, '../'),    //The base directory, an absolute path, for resolving entry points and loaders from configuration
   entry: {
     app: './src/main.js'
   },
   output: {
     path: config.build.assetsRoot,
-    filename: '[name].js',
+    filename: 'app.js',
     publicPath: process.env.NODE_ENV === 'production'
       ? config.build.assetsPublicPath
       : config.dev.assetsPublicPath
