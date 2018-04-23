@@ -5,7 +5,8 @@
   "author": "cloris <994619413@qq.com>",
   "private": true,
   "scripts": {
-    "dev": "webpack --config build/webpack.config.js",
+    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "node ./server/bin/www",
     "build": "node build/build.js"
   },
